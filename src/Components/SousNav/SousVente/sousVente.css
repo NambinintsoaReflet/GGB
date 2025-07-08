@@ -1,0 +1,15 @@
+.sous-vente-content {
+  margin: 20px;
+}
+
+.btn-new {
+  cursor: pointer;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 2px;
+  color: #d9d9d9;
+}
+
+.btn-new:hover {
+  background-color: #2e3f9e;
+}

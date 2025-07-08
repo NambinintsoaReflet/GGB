@@ -1,10 +1,13 @@
+@font-face {
+  font-family: roboto;
+  src: url("./Assets/Roboto-Regular.ttf");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: roboto;
+  -webkit-font-smoothing: roboto;
+  -moz-osx-font-smoothing: roboto;
 }
 
 code {
