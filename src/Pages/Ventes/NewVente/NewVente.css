@@ -1,0 +1,6 @@
+.form-vente{
+    display: flex;
+    align-items: baseline;
+    width: 70%;
+    justify-content: space-between;
+}

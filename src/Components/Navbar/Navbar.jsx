@@ -20,13 +20,13 @@ function Navbar() {
           </NavLink>
           {/* ---------- */}
           <NavLink to={"/achats"}>
-            <li>Achats</li>
+            <li>Approvisionnements</li>
           </NavLink>
           <NavLink to={"/stocks"}>
             <li>Stocks</li>
           </NavLink>
           <NavLink to={"consigne"}>
-            <li>Consignés</li>
+            <li>Consignations</li>
           </NavLink>
           <NavLink to={"rapport"}>
             <li>Rapport et Statiques</li>

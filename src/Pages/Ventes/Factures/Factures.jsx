@@ -1,25 +1,16 @@
-import { MdOutlinePreview } from "react-icons/md"; // Icône pour la prévisualisation
-import { IoPrintOutline } from "react-icons/io5"; // Icône pour l'impression
-import { FaFilePdf } from "react-icons/fa"; // Nouvelle icône pour l'export PDF
+import { MdOutlinePreview } from "react-icons/md";
+import { IoPrintOutline } from "react-icons/io5";
+import { FaFilePdf } from "react-icons/fa"; 
 
-// Importation du fichier CSS spécifique à ce composant pour le style
 import "./Factures.css";
 
-// Importation des données des factures de vente depuis un fichier local
-// Assurez-vous que le chemin et l'exportation (nommée ici avec {}) sont corrects.
 import { FactureVente } from "../../../Data/FactureVente";
 
-// Importation des Hooks essentiels de React
 import React, { useEffect, useState } from "react";
 import { IoMdRefresh } from "react-icons/io";
 
-/**
- * Composant Factures
- * Affiche une table de factures avec des fonctionnalités de filtrage, de sélection
- * et d'actions (prévisualisation, impression, export PDF).
- */
+
 function Factures() {
-  // --- États du composant ---
 
   // 'data' stocke les factures qui sont actuellement affichées dans le tableau (après filtrage et tri).
   const [data, setData] = useState([]);
@@ -201,12 +192,20 @@ function Factures() {
   /**
    * Gère l'action de prévisualisation des factures sélectionnées.
    */
-  const handlePreview = () => {
-    const selectedIds = getSelectedInvoiceIds();
-    if (selectedIds.length > 0) {
-      console.log("Prévisualiser les factures sélectionnées:", selectedIds);
+const handlePreview = (invoiceId = undefined) => {
+    let idsToPreview;
+    if (invoiceId) {
+      // Si un ID est passé (par exemple, par un double-clic sur une ligne spécifique)
+      idsToPreview = [invoiceId];
+    } else {
+      // Sinon, utilise les factures sélectionnées par les checkboxes
+      idsToPreview = getSelectedInvoiceIds();
+    }
+
+    if (idsToPreview.length > 0) {
+      console.log("Prévisualiser les factures :", idsToPreview);
       // Implémentez ici la logique de prévisualisation (ex: ouvrir une modale, rediriger vers une page de détail)
-      alert(`Prévisualisation des factures : ${selectedIds.join(", ")}`);
+      alert(`Prévisualisation des factures : ${idsToPreview.join(", ")}`);
     } else {
       alert("Veuillez sélectionner au moins une facture à prévisualiser.");
     }
@@ -397,6 +396,7 @@ function Factures() {
                   // Au clic sur la ligne, on bascule son état de sélection.
                   // Note : on ne passe pas l'événement ici car handleSelectItem est adapté pour ça.
                   onClick={() => handleSelectItem(item.id)}
+           onDoubleClick={() => handlePreview(item.id)}
                 >
                   <td className="t-center">
                     {/* Checkbox pour sélectionner/désélectionner une ligne individuelle */}

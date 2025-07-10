@@ -1,7 +1,10 @@
 .container-table {
   padding: 10px;
 }
-.titre-tableau{
+.container {
+  padding: 10px;
+}
+.titre-tableau {
   font-size: 18px;
   font-weight: 600;
   color: #3f51b5;
@@ -18,7 +21,7 @@ table {
 
 th,
 td {
-  border: 1px solid #868686;
+  border: 1px solid #8686867c;
   padding: 4px;
   text-align: left;
 }
@@ -36,10 +39,66 @@ table thead tr th {
   text-align: center;
 }
 
-tbody tr:hover, .selected-row{
+tbody tr:hover,
+.selected-row {
   background-color: rgba(109, 109, 255, 0.5);
 }
 
 tbody tr td {
-  color: #181818;
+  color: #2c2c2c;
+}
+
+.select-search-input {
+  color: #2c2c2c !important;
+  background-color: white !important;
+  padding: 4px !important;
+  font-size: 12px !important;
+  height: 24px !important;
+  border-radius: 2px !important;
+  border: 0.5px solid #555555 !important;
+  outline: none !important;
+}
+
+.select-search-select {
+  /* position: absolute !important; */
+  top: 25px!important;
+  background: white !important;
+  border: 1px solid #2c2c2c !important;
+}
+
+.select-search-row button {
+  color: #8a8a8a !important;
+}
+
+.select-search-row:hover {
+  background-color: #999999 !important;
+}
+
+.select-search-options {
+  padding: 0;
+  margin: 0;
+}
+
+.select-search-row button {
+  color: #2c2c2c !important;
+  width: 100% !important;
+}
+
+.select-search-is-highlighted, .select-search-option:not(.select-search-is-selected):hover {
+    background: #8a8a8a!important;
+}
+
+.select-search-is-selected {
+  font-weight: initial !important;
+}
+
+.select-search-option {
+  height: auto !important;
+  width: auto !important;
+  /* color: white!important; */
+  font-size: 12px !important;
+}
+
+.select-search-container{
+  --select-search-background:white!important;
 }

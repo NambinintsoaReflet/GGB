@@ -20,7 +20,7 @@
   width: 10em;
   border: 0.5px solid #d6d6d6;
   border-radius: 4px;
-  box-shadow: inset 2px 2px 4px #a7a7a7;
+  /* box-shadow: inset 2px 2px 4px #a7a7a7; */
   background-color: white;
   outline: 0;
 }
@@ -43,6 +43,7 @@
   padding: 2px 6px;
   color: rgb(0, 92, 99);
   cursor: pointer;
+  background-color: white;
 }
 
 .filtre button span{
@@ -50,7 +51,7 @@
   color: #101010;
 }
 .filtre button:hover{
-  background-color: #00628077;
-  color: white;
+  background-color: #c4c4c477;
+  /* color: white; */
 }
 
