@@ -19,6 +19,9 @@ function Navbar() {
             <li>Ventes</li>
           </NavLink>
           {/* ---------- */}
+          <NavLink to={"/achats"}>
+            <li>Achats</li>
+          </NavLink>
           <NavLink to={"/stocks"}>
             <li>Stocks</li>
           </NavLink>

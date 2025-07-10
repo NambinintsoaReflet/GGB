@@ -1,0 +1,56 @@
+.filtre {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* background-color: aqua; */
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.filtre .item label {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.filtre .item input,
+.filtre input,
+.filtre select {
+  padding: 5px 10px;
+  font-size: 12px;
+  width: 10em;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 4px #a7a7a7;
+  background-color: white;
+  outline: 0;
+}
+
+.filtre input.search {
+  width: 12em;
+  padding: 6px 10px!important;
+}
+
+.filtre select{
+  width: 13em;
+}
+
+.filtre button {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: rgb(0, 92, 99);
+  cursor: pointer;
+}
+
+.filtre button span{
+  font-size: 12px;
+  color: #101010;
+}
+.filtre button:hover{
+  background-color: #00628077;
+  color: white;
+}
+

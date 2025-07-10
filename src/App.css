@@ -1,0 +1,45 @@
+.container-table {
+  padding: 10px;
+}
+.titre-tableau{
+  font-size: 18px;
+  font-weight: 600;
+  color: #3f51b5;
+  margin-top: 0;
+}
+table {
+  font-size: 14px;
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th,
+td {
+  border: 1px solid #868686;
+  padding: 4px;
+  text-align: left;
+}
+
+table thead tr th {
+  font-weight: 600;
+}
+
+.td-number {
+  text-align: end;
+}
+
+.t-center th,
+.t-center {
+  text-align: center;
+}
+
+tbody tr:hover, .selected-row{
+  background-color: rgba(109, 109, 255, 0.5);
+}
+
+tbody tr td {
+  color: #181818;
+}

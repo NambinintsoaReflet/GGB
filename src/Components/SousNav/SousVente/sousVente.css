@@ -1,8 +1,10 @@
 .sous-vente-content {
-  margin: 20px;
+  margin: 0px 0px;
 }
 
 .btn-new {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   background-color: #3f51b5;
   border: none;

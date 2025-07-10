@@ -6,8 +6,7 @@
 body {
   margin: 0;
   font-family: roboto;
-  -webkit-font-smoothing: roboto;
-  -moz-osx-font-smoothing: roboto;
+  background-color: #f1f1f1;
 }
 
 code {
