@@ -19,6 +19,10 @@ table {
   font-size: 12px;
 }
 
+thead tr th{
+  text-align: center;
+}
+
 th,
 td {
   border: 1px solid #8686867c;
@@ -55,13 +59,20 @@ tbody tr td {
   font-size: 12px !important;
   height: 24px !important;
   border-radius: 2px !important;
-  border: 0.5px solid #555555 !important;
+  border: none !important;
+  border-bottom: 1px solid #00589f !important;
   outline: none !important;
+}
+
+.form-group select:focus {
+  outline: none!important;
+  box-shadow: none !important;
 }
 
 .select-search-select {
   /* position: absolute !important; */
-  top: 25px!important;
+  top: 25px !important;
+  height: 70px!important;
   background: white !important;
   border: 1px solid #2c2c2c !important;
 }
@@ -84,8 +95,9 @@ tbody tr td {
   width: 100% !important;
 }
 
-.select-search-is-highlighted, .select-search-option:not(.select-search-is-selected):hover {
-    background: #8a8a8a!important;
+.select-search-is-highlighted,
+.select-search-option:not(.select-search-is-selected):hover {
+  background: #8a8a8a !important;
 }
 
 .select-search-is-selected {
@@ -99,6 +111,10 @@ tbody tr td {
   font-size: 12px !important;
 }
 
-.select-search-container{
-  --select-search-background:white!important;
+.select-search-container {
+  --select-search-background: white !important;
+}
+
+.select-search-wrapper {
+  /* margin-bottom: 10px !important; */
 }

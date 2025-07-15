@@ -6,7 +6,7 @@
 .nav ul {
   display: flex;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
   grid-gap: 2px;
 }
 
@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
   grid-gap: 5px;
 }
 
