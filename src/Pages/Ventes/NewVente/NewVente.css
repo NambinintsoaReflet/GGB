@@ -50,6 +50,7 @@
 
 .form-column h2 {
   color: #555;
+  padding-bottom: 4px;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1em;
@@ -169,6 +170,11 @@
   transform: scale(1.1);
 }
 
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .form-grid {
@@ -195,3 +201,223 @@
     margin-bottom: 10px;
   }
 }
+
+
+/* impression */
+
+/* Gardez tous vos styles existants */
+
+/* Styles pour la nouvelle section de résumé de paiement */
+.payment-summary-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.totals-display p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.totals-display p span {
+    font-weight: normal;
+    color: #007bff; /* Ou une couleur distinctive pour les montants */
+    font-size: 1em;
+}
+
+.total-ttc {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 13px !important;
+    color: #28a745 !important; /* Vert pour le total final */
+}
+.total-ttc span {
+    font-size: 1.3em !important;
+    color: #28a745 !important;
+}
+
+
+.payment-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 240px;
+    align-self: end;
+    border-top: 1px solid #eee;
+}
+
+.payment-input-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.payment-input-group input[type="number"] {
+padding: 4px;
+    border: none;
+    color: #49696f;
+    border-bottom: 1px solid #00589f !important;
+    border-radius: 3px;
+    font-size: 12px;
+    width: 20em;
+    box-sizing: border-box;
+    transition: border-color 0.3s
+}
+
+.payment-input-group .rendu-monnaie {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.payment-input-group .rendu-monnaie span {
+    font-weight: normal;
+    color: #d84315; /* Rouge pour le rendu */
+    font-size: 1.3em;
+}
+
+
+/* Styles pour le modal d'impression */
+.print-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Au-dessus de tout */
+}
+
+.print-modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px; /* Largeur d'un ticket de caisse typique */
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    font-family: 'Consolas', 'Courier New', monospace; /* Police mono pour effet ticket */
+    color: #333;
+    font-size: 0.9em;
+    text-align: center; /* Pour le header et footer */
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #888;
+}
+.close-modal-btn:hover {
+    color: #333;
+}
+
+.receipt-header, .receipt-footer {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.receipt-header h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    color: #000;
+}
+.receipt-header p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.receipt-items {
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+.receipt-item .item-qty-name {
+    text-align: left;
+    flex-grow: 1;
+}
+.receipt-item .item-total {
+    text-align: right;
+    flex-shrink: 0;
+    width: 80px; /* Largeur fixe pour aligner les totaux */
+}
+
+.receipt-totals {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #999;
+}
+
+.receipt-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.receipt-line span:first-child {
+    color: #555;
+}
+.receipt-line span:last-child {
+    color: #000;
+}
+
+.receipt-footer {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 20px;
+}
+.receipt-footer p {
+    margin: 2px 0;
+}
+
+.receipt-id-date, .receipt-ticket-number {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Vous pouvez ajouter un bouton "Imprimer" dans le modal si vous voulez offrir l'option d'impression physique via le navigateur */
+/* .print-modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.print-modal-content button:hover {
+    background-color: #0056b3;
+} */

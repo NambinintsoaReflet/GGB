@@ -1,0 +1,65 @@
+/* src/components/StockNotification/StockNotification.css */
+.stock-notification-container {
+  position: fixed; /* Reste en place même en scrollant */
+  bottom: 20px;    /* 20px du bas */
+  right: 20px;     /* 20px de la droite */
+  background-color: #ffe0b2; /* Une couleur orange pâle pour l'alerte */
+  border: 1px solid #ffab40; /* Bordure plus foncée */
+  border-radius: 4px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Assure qu'elle est au-dessus des autres éléments */
+  max-width: 350px; /* Largeur maximale pour ne pas être trop envahissante */
+  font-family: Arial, sans-serif;
+  color: #333;
+  animation: fadeInOut 7s forwards; /* Animation d'apparition/disparition */
+}
+
+.stock-notification-container h3 {
+  margin-top: 0;
+  color: #d84315; /* Rouge foncé pour le titre */
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.stock-notification-container p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.stock-notification-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.stock-notification-container ul li {
+  margin-bottom: 5px;
+  font-size: 0.85em;
+}
+
+.stock-notification-container .close-notification-btn {
+  background-color: #ff8a65; /* Un rouge-orange pour le bouton */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-top: 10px;
+  float: right; /* Aligne le bouton à droite */
+  transition: background-color 0.2s ease;
+}
+
+.stock-notification-container .close-notification-btn:hover {
+  background-color: #e64a19; /* Couleur plus foncée au survol */
+}
+
+/* Animation CSS pour l'apparition et la disparition */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}

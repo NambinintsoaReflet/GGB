@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .nav ul {
@@ -16,13 +17,13 @@
 }
 
 .nav ul a:hover {
-  color: #3f51b5;
+  color: #004379;
   background-color: #6276e418;
   border-radius: 2px;
 }
 
 .nav ul a.active {
-  background-color: #3f51b5;
+  background-color: #00589f;
   color: #d9d9d9;
   border-radius: 2px;
 }
@@ -38,6 +39,7 @@
 .nav .logo {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 .nav .logo h3 {
@@ -53,7 +55,7 @@
 
 .sous-nav ul {
   margin: 0;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   list-style: none;
@@ -76,13 +78,13 @@
 
 .sous-nav ul a.active {
   background-color: #ffffff;
-  color: #3f51b5;
+  color: #00589f;
   border-radius: 2px;
   box-shadow: inset 4px 4px 6px #c9c9c9;
 }
 
 .sous-nav ul a:hover {
-  color: #3f51b5;
+  color: #00589f;
   border-radius: 2px;
   box-shadow: inset 4px 4px 6px #c9c9c9;
 }

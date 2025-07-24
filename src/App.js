@@ -11,6 +11,7 @@ import NewVente from "./Pages/Ventes/NewVente/NewVente.jsx";
 import NewBoisson from "./Pages/Stocks/NewBoissons/NewBoisson.jsx";
 import SousStock from "./Components/SousNav/SousStocks/SousStock.jsx";
 import SousAchat from "./Components/SousNav/SousAchats/SousAchat.jsx";
+import StockNotification from "./Components/StockNotification/StockNotification.jsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             </Route>
           </Route>
         </Routes>
+         <StockNotification />
       </BrowserRouter>
     </>
   );
